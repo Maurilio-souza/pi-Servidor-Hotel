@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            background-image: url("https://projeto-hotel-nine.vercel.app/img/Fundo.png");
+            color: white;
+            font-family: 'Crimson Text', serif;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        header ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        header ul li span {
+            content: "";
+            width: 7px;
+            height: 7px;
+            display: inline-block;
+            background-color: rgb(136, 100, 16);
+            rotate: 45deg;
+            margin-left: 20px;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #FCF5E7;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .modal-bg-reserva-concluida {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-reserva {
+            background-color: rgba(255, 255, 255, 0.83);
+            text-align: center;
+            padding: 25px;
+            border-radius: 13px;
+            color: black;
+            max-width: 580px;
+        }
+
+        .modal-reserva p {
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="container">
+        <a href="index.html"><img src="https://projeto-hotel-nine.vercel.app/img/Logo.png" alt="Imagem da logomarca do hotel"></a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="dormitorios.html">Dormitórios</a>
+                </li>
+                <li>
+                    <span></span>
+                </li>
+                <li>
+                    <a href="banquete.html">Banquete</a>
+                </li>
+                <li>
+                    <span></span>
+                </li>
+                <li>
+                    <a href="atracoes.html">Atrações</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div class="modal-bg-reserva-concluida" id="modal-bg-reserva-concluida">
+        <div class="modal-reserva">
+            <img src="https://projeto-hotel-nine.vercel.app/VERIFICADO.png" alt="">
+            <h3>Obrigado por reservar conosco!</h3>
+            <p>Estamos ansiosos para te hospedar em um lugar que te faça sentir como um verdadeiro bruxo ou bruxa.
+                <br>
+                PS: Traga sua varinha mágica!
+            </p>
+        </div>
+
+        <script>
+            var modalBgReserva = document.getElementById("modal-bg-reserva-concluida")
+
+            document.addEventListener("click", (event) => {
+                if (event.target.classList.contains('modal-bg-reserva-concluida') == true) {
+                    closeModalReserva()
+                }
+
+            })
+
+            function closeModalReserva() {
+                window.location.href = "https://projeto-hotel-nine.vercel.app/dormitorios.html";
+            }
+        </script>
+</body>
+
+</html>
