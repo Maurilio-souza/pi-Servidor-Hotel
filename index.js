@@ -22,8 +22,8 @@ app.post("/", (req, res)=>{
 });
 
 
-mongoose.connect("mongodb+srv://mauriliomssil:ngNXKFE6WfmI3V1X@cluster0.d3pjkqk.mongodb.net/?retryWrites=true&w=majority");
-
+mongoose.connect("mongodb+srv://mauriliomssil:Mon@2602@cluster0.d3pjkqk.mongodb.net/?retryWrites=true&w=majority");
+// ngNXKFE6WfmI3V1X
 
 function insertReserva (nome, email, telefone, checkin, checkout, valorTotal, quartoReservado) {
     const estadia = new Reserva({
