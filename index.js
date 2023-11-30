@@ -22,7 +22,7 @@ app.post("/", (req, res)=>{
 });
 
 
-mongoose.connect("mongodb+srv://mauriliosouza:xwXwSY4Ay4m9I5Ua@cluster0.heqbmho.mongodb.net/?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://mauriliomssil:ngNXKFE6WfmI3V1X@cluster0.d3pjkqk.mongodb.net/?retryWrites=true&w=majority");
 
 
 function insertReserva (nome, email, telefone, checkin, checkout, valorTotal, quartoReservado) {
